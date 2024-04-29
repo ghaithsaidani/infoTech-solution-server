@@ -1,10 +1,11 @@
 package org.example;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.boot.SpringApplication;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @RestController
 public class Main {
     public static void main(String[] args) {
